@@ -23,3 +23,14 @@ birth_Months = {'Kevin':'Mar',
                 'Maia':'Apr'}
 birth_series = pd.Series(birth_Months)
 print(birth_series)
+
+
+# Create a DataFrame from a single Series object
+df = pd.DataFrame(birth_series, columns=['Birth Month'])
+print(df) # Data frame objects have column headers
+
+pokemon_df = pd.read_csv('pokemon_data.csv')
+print(pokemon_df)
+print(pokemon_df.columns)
+print(pokemon_df["Speed"])
+print(pokemon_df.HP)
