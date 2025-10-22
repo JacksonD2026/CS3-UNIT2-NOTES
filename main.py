@@ -34,3 +34,18 @@ print(pokemon_df)
 print(pokemon_df.columns)
 print(pokemon_df["Speed"])
 print(pokemon_df.HP)
+
+pokemon_df['Attack Ratio'] = pokemon_df['Attack'] / pokemon_df['Sp. Atk']
+
+print(pokemon_df.head(10))
+print(pokemon_df.sample(3))
+print(pokemon_df.shape)
+print(pokemon_df.columns)
+print(pokemon_df.info())
+print(pokemon_df.describe())
+print(pokemon_df['Defense'].describe())
+print(pokemon_df['Type 1'].value_counts())
+
+print(pokemon_df.loc[4])
+print(pokemon_df.groupby('Type 1')[['HP','Speed']].mean())
+print(pokemon_df.groupby('Type 1').size().sort_values)
